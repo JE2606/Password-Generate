@@ -1,0 +1,226 @@
+/* RESETEO GENERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ESTILO DEL CUERPO: LETRAS Y FONDO  */
+body{
+    background: #fafafa;
+    font-family: Lato, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+/* ESTILO DEL CUADRO CONTENEDOR */
+.container{
+    padding: 40px 60px;
+    background-color: #f2c335;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba(190, 190, 190, 0.3);
+    border-radius: 20px;
+    box-shadow: 0px 10 px 10px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+}
+
+/* ESTILOS DEL TITULO */
+h2{
+    padding: 14px ;
+    color: #191641;
+    font-weight: 25px;
+    font-size: 30px;
+}
+
+/*ESTILOS DEL SLIDER PARA CANT. DE CARACTERES  */
+/* ESTILO BASE DEL ESPACIO DEL SLIDER */
+.slider{
+    -webkit-appearance: none;
+    width: 200px;
+    height: 14px;
+    background: #fafafa;
+    outline: none;
+    border-radius: 10px;
+    opacity: 1;
+    -webkit-transition: 1s;
+    -webkit-transition: 2s;
+    transition: opacity 0.5s;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    margin-right: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+/* HOVER DEL SLIDER */
+.slider:hover{
+    opacity: 0.8;
+}
+/* CURSOR PROPIO DEL SLIDER */
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #fafafa;
+    border-radius: 50%;
+    border: #6239d4 2px solid;
+    cursor: pointer;
+    box-shadow:-200px 0 0 200px  #6239d4;
+}
+/* ESTILOS PARA ESPACIO Y DIRECCION */
+.slider_main{
+    display: flex;
+    flex-direction: row;
+}
+
+/* ESTILOS DEL OUTPUT */
+output{
+    position: relative;
+    text-align: center;
+    width: 40px;
+    font-size: 1.25rem;
+    color: #191641;
+    margin-top: 11px; 
+}
+
+/* ESTILOS DEL CHECKMARK */
+.checkmmark{
+    height: 1000px;
+}
+/* ESPACIO DEL LABEL PARA CONTENER EL CHECKMARK */
+.lbl-switch{
+    margin-bottom: 15px;
+    display:inline-block;
+    width: 55px;
+    height: 30px;
+    background: grey;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+/* CAMBIO DE COLOR DEL LABEL CIUANDO ESTE ACTIVO EL CHECKMARK */
+#checkbox:checked~ .lbl-switch{
+    background: #6239d4;
+}
+
+/* CIRCULO QUE SE DESPLAZA CON EJEMPLO DE BOTON */
+.lbl-switch:after{
+    position: absolute;
+    content: '';
+    width: 22px;
+    height: 22px;
+    background: #fafafa;
+    border-radius: 100px;
+    top: 4px;
+    left: 5px;
+    transition: 0.3s;
+}
+/* MOVIMIENTO DEL CIRCULO CUANDO SE ACTIVE EL CHECKET */
+#checkbox:checked~ .lbl-switch::after{
+    left: 28px;
+}
+
+.checkbox {
+    display: none;  
+}
+
+.check{
+    display: flex;
+}
+/* TEXT AL LADO DEL CHECK  */
+.span{
+    margin-right: 15px;
+    margin-top: 5px;
+    color: #191641;
+}
+
+/* BOTON DE GENERAR CONTRASEÑA */
+#generate{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 180px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #191641;
+    background-color: rgb(223, 220, 220);
+    cursor: pointer;
+    transition: .3s ease all;
+    position: relative;
+    overflow: hidden;
+    
+}
+.action-btn span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+
+#generate:hover{
+    color: #fafafa;
+    background: #6239d4;
+}
+
+.action-btn::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #6239d4;
+    position: absolute;
+    z-index: 1;
+    top: -80px;
+    left: 0;
+    transition: .5s ease-in-out all;
+}
+
+.action-btn:hover::after{
+    top: 0;
+}
+
+/* BOTON DE COPIAR */
+.copiar{
+    display: flex;
+    margin-top: 10px;
+}
+
+.txt-copiar{
+    margin-right: 15px;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #191641;
+}
+.btn-copiar{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #f2c335;
+    cursor: pointer;
+    font-size: 30px;
+    color: rgba(223, 220, 220);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    transition: .3s ease all;
+}
+
+.btn-copiar:hover{
+    color: #6239d4;
+    font-size: 40px;
+    transition: 0.5s ease-in-out;
+}
+
+.btn-copiar::after{
+    transition: .5s ease-in-out all;
+}
+
+
+.btn-copiar:hover::after{
+    transition: 0.5s;
+}

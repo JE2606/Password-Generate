@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- lINK CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- LINK PARA ESTILO DEL BOTON -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+
+    <!-- ICONO -->
+    <link rel="shortcut icon" href="img/icono.png" type="image/x-icon">
+
+    <!-- TITULO -->
+    <title>Generador de Contraseñas</title>
+</head>
+<body>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container">
+    <!-- TITULO DEL CUADRO -->
+    <h2>Generador de Contraseñas</h2>
+    <!-- SLIDER PARA CANTIDAD DE CARACTERES  -->
+    <div class="slider_main">
+        <input type="range" value="8" min="1" max="25" class="slider" id="slider" oninput="this.nextElementSibling.value = this.value">
+        <output id="output" class="output">8</output>
+    </div>
+
+    <!-- DIV PADRE PARA CARACTERS ESPECIALES -->
+    <div class="check">
+        <!-- DIV PARA EL TEXTO -->
+        <div class="span">  
+            <span class="checkmark"><h3>Ingresar caracteres especiales </h3></span>
+        </div>
+        <!-- DIV PARA EL CHECK-MARK -->
+        <div class="div_check">
+            <input type="checkbox" id="checkbox" checked="checked" class="checkbox">
+            <label for="checkbox" class="lbl-switch"></label>
+        </div>
+    </div>
+
+    <!-- BOTON PARA GENERAR CONTRASEÑA -->
+    <button id="generate" class="action-btn"><span>
+        Generar contraseña</span>
+    </button>
+
+    <!-- APARTADO PAARA COPIAR LA CONTRASEÑA GENERADA -->
+    <div id="output" class="copiar">
+        <h5 id="pwd_txt" class="txt-copiar"><span>Haga click en generar contraseña</span></h5>
+        <!-- COPIAR BOTON -->
+        <button id="clipboard" class="btn-copiar">
+            <i class="fi fi-sr-copy-alt"></i>
+        </button>
+    </div>
+    <span id="copy_text"></span>
+  </div>
+</body>
+<!-- JS PARA FUNCIONES ESPECIALES -->
+<script src="index.js"></script>
+</html>
