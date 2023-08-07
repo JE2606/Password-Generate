@@ -224,3 +224,11 @@ output{
 .btn-copiar:hover::after{
     transition: 0.5s;
 }
+@media screen and (max-width: 768px){
+    .container{
+        margin: 2px;
+    }
+    .span{
+        margin-bottom: 1em;
+    }
+}
